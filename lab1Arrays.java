@@ -6,6 +6,7 @@ public class lab1Arrays {
     {
         int[] nums = new int[5];
         displayArray(readUserSequence(nums, 5), 5);
+        isPalindrome(displayArray(readUserSequence(nums, 5), 5), 5);
         
     }
 
@@ -29,14 +30,34 @@ public class lab1Arrays {
     }
 
 
-    public static void displayArray(int[] nums, int limit) {
+    public static int[] displayArray(int[] nums, int limit) {
 
 
         for(int i =0 ; i < nums.length;i++){
         
             System.out.print(nums[i]+" ");
           }
-          
+          return nums; 
+
     
         }
+        
+    public static boolean isPalindrome(int[] nums, int limit) {
+        boolean palindrom = true;
+    int i , j;
+    for( i =0,j = nums.length-1 ;i<nums.length-1; i++,j--){
+        if (nums[i]==nums[j])
+          continue;
+        else
+          palindrom = false;
+        break;
+      }
+    
+      if (palindrom == true)
+    System.out.println("it is a palindrome");
+    else
+    System.out.println(" it isn't a palindrome"); 
+    return palindrom;
 }
+    }
+   
