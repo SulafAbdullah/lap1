@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class lab1Arrays {
   
     public static void main( String[] args )
-    {int[] nums = new int[5];
-        readUserSequence(nums, 5);
-        displayArray(nums, 5);
+    {
+        int[] nums = new int[5];
+        displayArray(readUserSequence(nums, 5), 5);
         
     }
 
-    public static void readUserSequence(int[] arrayToFill , int limit){
+    public static int[] readUserSequence(int[] arrayToFill , int limit){
         int[] nums = new int[5];
         Scanner scnr = new Scanner(System.in);
         System.out.println("enter the first number: ");
@@ -23,7 +23,9 @@ public class lab1Arrays {
         System.out.println("enter the fifth number: ");
         nums[4]= scnr.nextInt();
 
-     scnr.close();
+        scnr.close();
+        return nums; 
+     
     }
 
 
