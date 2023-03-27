@@ -2,6 +2,12 @@ import java.util.Scanner;
 
 public class lab1Arrays {
   
+    public static void main( String[] args )
+    {int[] nums = new int[5];
+        readUserSequence(nums, 5);
+        displayArray(nums, 5);
+        
+    }
 
     public static void readUserSequence(int[] arrayToFill , int limit){
         int[] nums = new int[5];
@@ -19,11 +25,16 @@ public class lab1Arrays {
 
      scnr.close();
     }
-    public static void main( String[] args )
-    {
-        int[] nums = new int[5];
-       readUserSequence(nums, 5);
-    }
 
 
+    public static void displayArray(int[] nums, int limit) {
+
+
+        for(int i =0 ; i < nums.length;i++){
+        
+            System.out.print(nums[i]+" ");
+          }
+          
+    
+        }
 }
